@@ -33,12 +33,13 @@ and another work is creating in documents
 
 ## Intended uses & limitations
 
+### Intended Uses:
 Sentiment Analysis for Telugu Movie Reviews: This project is designed for Telugu-speaking users, allowing them to analyze the sentiment of Telugu movie reviews.
 Movie Rating Generator: It provides a quick movie rating based on sentiment analysis results, assisting Telugu-speaking audiences in decision-making.
 Training Data Creation: This project offers a manually labeled dataset for Telugu movie reviews, aiding NLP research in the field of sentiment analysis.
 Documentation: Comprehensive documentation is available to guide users and developers.
 
-Limitations:
+### Limitations:
 Language Restriction: Only supports the Telugu language.
 Sentiment Accuracy: Accuracy depends on the input text's quality and complexity.
 Dataset Bias: Accuracy is influenced by biases in the training data.
@@ -48,26 +49,26 @@ External Factors: Accuracy may be affected by user bias and industry changes.
 
 ## Training procedure
 
-# Step-1:
+### Step-1:
 For the dataset we created our own dataset file which contains movie sentences(reviews) and its corresponding review that is "Positive" and "Negative"
 we taken reference of The corpus "Sentiraama" was created by G.Rama Rohit Reddy at Language Technologies Research Centre, KCIS, IIIT Hyderabad,In the corpus, folder named "Movie Reviews" contains 267 different Telugu movie reviews written in Telugu script. Out of them 136 are positive and 131 are negative. It contains a total of 20000 sentences and 165049 words. In the corpus, folder named "Product Reviews" contains 200 different product reviews written in Telugu script. Out of them 100 are positive and 100 are negative. It contains a total of 43199 sentences and 259189 words, these sentences are very long(consisting of whole story of the movie) so decided to make it short for easy training .
 
-# Step2:
+### Step2:
 Pre-processing Data The collected data is pre-processed using different pre-processing techniques and splitting the large Telugu Sentence into small sentences.
 
-# Step-3:
+### Step-3:
 Connecting to Hugging Face Hugging Face provides a token with which we can log in using a notebook function and the rest of the work we do will be exported to the platform automatically.
 
-# Step-4: 
+### Step-4: 
 Loading pre-trained model and tokenizer The pre-trained model and tokenizer from xlm-roberta-base are loaded for training our Telugu data
 
-# Step-5: 
+### Step-5: 
 Training the model Required libraries like Trainer and Training arguments are imported from Transformers library. The after giving the Training arguments with our data we train the model using the train() method which takes 1 to 1 ½ hours depending upon the size of our input data
 
-# Step-6: 
+### Step-6: 
 Pushing model and tokenizer Then trainer.push_to_hub() and tokenizer.push_to_hub() methods are used to export our trained model and its tokenizers which are used for the mapping of words in prediction.
 
-# Step-7: 
+### Step-7: 
 Testing In the hugging face after opening our model page there is an API in which We give a Telugu Sentence as input with
 
 ### Training hyperparameters
